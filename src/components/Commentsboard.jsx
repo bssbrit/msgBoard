@@ -6,6 +6,7 @@ const Commentsboard = ({comments}) => {
       {comments.map((comment) => (
         <Comment key={comment.id} comment={comment}  />
       ))}
+      
     </div>
   )
 }

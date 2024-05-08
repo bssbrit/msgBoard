@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 import './App.css'
 import Commentsboard from './components/Commentsboard';
+import NewComment from './components/NewComment';
 
 function App() {
   const [messageData, setData] = useState(null)
@@ -26,12 +27,12 @@ function App() {
   return (
     <>
       <div>
-      <h1>JSON Data:</h1>
       {messageData ? (
         <Commentsboard comments={messageData.comments}/>
       ) : (
         <p>Loading...</p>
       )}
+      <NewComment commentData={messageData}/>
     </div>
     </>
   )
